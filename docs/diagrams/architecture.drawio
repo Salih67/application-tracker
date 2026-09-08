@@ -1,0 +1,41 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="8KudsHw_LoDRpfqgFQGu" name="Seite-1">
+    <mxGraphModel dx="2054" dy="1103" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="__TzLFUnjYmM16AQFlsZ-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Frontend&lt;div&gt;React + TypeScript&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="__TzLFUnjYmM16AQFlsZ-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Backend&lt;div&gt;Java + Spring Boot&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="300" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="__TzLFUnjYmM16AQFlsZ-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="PostgreSQL&lt;div&gt;Database&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="630" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="__TzLFUnjYmM16AQFlsZ-5" edge="1" parent="1" source="__TzLFUnjYmM16AQFlsZ-1" style="endArrow=classic;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=1;startArrow=classic;startFill=1;" target="__TzLFUnjYmM16AQFlsZ-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="200" y="280" as="sourcePoint" />
+            <mxPoint x="250" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="__TzLFUnjYmM16AQFlsZ-6" connectable="0" parent="__TzLFUnjYmM16AQFlsZ-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="HTTP&lt;div&gt;Rest API&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.08" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="__TzLFUnjYmM16AQFlsZ-7" edge="1" parent="1" source="__TzLFUnjYmM16AQFlsZ-2" style="endArrow=classic;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=1;startArrow=classic;startFill=1;" target="__TzLFUnjYmM16AQFlsZ-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="510" y="280" as="sourcePoint" />
+            <mxPoint x="560" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="__TzLFUnjYmM16AQFlsZ-8" connectable="0" parent="__TzLFUnjYmM16AQFlsZ-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="JPA / Hibernate" vertex="1">
+          <mxGeometry relative="1" x="-0.0381" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
