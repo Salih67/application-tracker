@@ -1,6 +1,7 @@
 package com.applicationtracker.backend.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "company")
@@ -11,6 +12,7 @@ public class Company {
     @Column(name = "company_id")
     private Long id;
 
+    @NotBlank
     @Column(name = "company_name", nullable = false, unique = true)
     private String companyName;
 

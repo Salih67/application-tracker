@@ -1,6 +1,9 @@
 package com.applicationtracker.backend.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 
@@ -12,6 +15,7 @@ public class Application {
     @Column(name = "application_id")
     private Long id;
 
+    @NotBlank
     @Column(name = "position", nullable = false)
     private String position;
 
@@ -21,10 +25,13 @@ public class Application {
     @Column(name = "url", columnDefinition = "TEXT")
     private String url;
 
+    @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
     private ApplicationStatus status;
 
+    @NotNull
+    @Valid
     @ManyToOne(optional = false)
     @JoinColumn(name = "company_id", nullable = false)
     private Company company;

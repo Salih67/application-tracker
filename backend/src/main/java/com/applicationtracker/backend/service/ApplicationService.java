@@ -2,6 +2,7 @@ package com.applicationtracker.backend.service;
 
 import com.applicationtracker.backend.entity.Application;
 import com.applicationtracker.backend.entity.Company;
+import com.applicationtracker.backend.exception.ApplicationNotFoundException;
 import com.applicationtracker.backend.repository.ApplicationRepository;
 import com.applicationtracker.backend.repository.CompanyRepository;
 import org.springframework.stereotype.Service;
@@ -23,7 +24,8 @@ public class ApplicationService {
     }
 
     public Application getApplicationById(Long id) {
-        return applicationRepository.findById(id).orElse(null);
+        return applicationRepository.findById(id)
+                .orElseThrow(() -> new ApplicationNotFoundException("Application with id " + id + " not found"));
     }
 
     public Application createApplication(Application application){
@@ -35,15 +37,14 @@ public class ApplicationService {
     }
 
     public void deleteApplication(Long id){
-        applicationRepository.deleteById(id);
+        Application application = getApplicationById(id);
+        applicationRepository.delete(application);
     }
 
     public Application updateApplication(Long id, Application updatedApplication){
-        Application existingApplication = applicationRepository.findById(id).orElse(null);
+        Application existingApplication = getApplicationById(id);
 
-        if(existingApplication == null){
-            return null;
-        }
+
 
         Company company = companyRepository
                 .findByCompanyName(updatedApplication.getCompany().getCompanyName())
