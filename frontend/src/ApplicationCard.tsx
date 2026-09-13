@@ -1,3 +1,5 @@
+import './ApplicationCard.css'
+
 type ApplicationCardProps ={
     id: number;
     company: string;
@@ -9,12 +11,16 @@ type ApplicationCardProps ={
 
 function ApplicationCard({id, company, position, status, onDelete, onEdit}: ApplicationCardProps) {
     return (
-        <article>
-            <button onClick={() => onEdit(id)}>Edit</button>
-            <button onClick={() => onDelete(id)}>Delete</button>
-            <h2>{company}</h2>
-            <h2>{position}</h2>
-            <h2>{status}</h2>
+        <article className="application-card">
+            <header className="application-card-header">
+                <h2>{company}</h2>
+                <p>{position}</p>
+            </header>
+            <span className="application-card-status">{status}</span>
+            <footer className="application-card-actions">
+                <button onClick={() => onEdit(id)}>Edit</button>
+                <button onClick={() => onDelete(id)}>Delete</button>
+            </footer>
         </article>
     )
 }

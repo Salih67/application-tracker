@@ -1,0 +1,30 @@
+.application-card{
+    width: 100%;
+    max-width: 50rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    background:white;
+}
+.application-card-header{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.application-card-status{
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: #eeeeee;
+}
+
+.application-card-actions{
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
